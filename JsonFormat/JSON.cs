@@ -25,11 +25,40 @@ namespace JsonFormat
         }
         public static string GetInfoFiles(string path)
         {
-            return "";
+            FileInfo[] files = new DirectoryInfo(path).GetFiles();
+
+            // files.GetLength() or files.Length ???
+            //
+            // int[,,] a = new int[10, 11, 12];
+            // Console.WriteLine(a.Length);           // 1320
+            // Console.WriteLine(a.GetLength(0));     // 10
+            // Console.WriteLine(a.GetLength(1));     // 11
+            // Console.WriteLine(a.GetLength(2));     // 12
+
+            if (files.GetLength(0) == 0)
+            {
+                return " ";
+            }
+            else
+            {
+                string json = "";
+                //...
+                return json;
+            }
         }
         public static string GetInfoChildren(string path)
         {
-            return "";
+            DirectoryInfo[] subdirectories = new DirectoryInfo(path).GetDirectories();
+            if (subdirectories.GetLength(0) == 0)
+            {
+                return " ";
+            }
+            else
+            {
+                string json = "";
+                //...
+                return json;
+            }
         }
     }
 }
