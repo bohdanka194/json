@@ -14,11 +14,11 @@ namespace JsonFormat
         {
             DirectoryInfo mydir = new DirectoryInfo(path);
             string json = "";
-            json += "{";
-            json += "\t\"Name\": "+ "\""+ mydir.Name+ "\"\n";
-            json += "\t\"DataCreated\": " + "\"" + mydir.CreationTime + "\"\n";
-            json += "\t\"Files\": " + "[" + GetInfoFiles(path) + "]\n";
-            json += "\t\"Children\": " + "[" + GetInfoChildren(path) + "\\n";
+            json += "{\n";
+            json += "\t\"Name\": "+ "\""+ mydir.Name+ "\",\n";
+            json += "\t\"DataCreated\": " + "\"" + mydir.CreationTime + "\",\n";
+            json += "\t\"Files\": " + "[" + GetInfoFiles(path) + "],\n";
+            json += "\t\"Children\": " + "[" + GetInfoChildren(path) + "]\n";
             json += "}";
 
             return json; 
