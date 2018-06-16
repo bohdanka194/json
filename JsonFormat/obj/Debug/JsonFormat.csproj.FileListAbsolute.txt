@@ -1,0 +1,7 @@
+c:\users\bohda\source\repos\JsonFormat\JsonFormat\obj\Debug\JsonFormat.csprojAssemblyReference.cache
+c:\users\bohda\source\repos\JsonFormat\JsonFormat\obj\Debug\JsonFormat.csproj.CoreCompileInputs.cache
+c:\users\bohda\source\repos\JsonFormat\JsonFormat\bin\Debug\JsonFormat.exe.config
+c:\users\bohda\source\repos\JsonFormat\JsonFormat\bin\Debug\JsonFormat.exe
+c:\users\bohda\source\repos\JsonFormat\JsonFormat\bin\Debug\JsonFormat.pdb
+c:\users\bohda\source\repos\JsonFormat\JsonFormat\obj\Debug\JsonFormat.exe
+c:\users\bohda\source\repos\JsonFormat\JsonFormat\obj\Debug\JsonFormat.pdb
