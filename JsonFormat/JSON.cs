@@ -18,7 +18,7 @@ namespace JsonFormat
             json += tab + "\t\"Name\": " + "\""+ mydir.Name+ "\",\n";
             json += tab + "\t\"DataCreated\": " + "\"" + mydir.CreationTime + "\",\n";
             json += tab + "\t\"Files\": " + "[" + GetInfoFiles(path,tab) + "],\n";
-            json += tab + "\t\"Children\": " + "[" + GetInfoChildren(path,tab+"\t") + " (!)in the end works bad]\n";
+            json += tab + "\t\"Children\": " + "[" + GetInfoChildren(path,tab+"\t\t") + "]\n";
             json += tab + "}";
 
             return json; 
@@ -55,13 +55,14 @@ namespace JsonFormat
             else
             {
                 string json = "\n";
-                foreach(var subdir in subdirectories)
+                foreach (var subdir in subdirectories)
                 {
-                    json += FormatJson(subdir.FullName,tab);
+                    json += FormatJson(subdir.FullName, tab);
 
                     json += ",\n";
                 }
-                json += "\n";
+                string lessTab= tab.Substring(0, tab.Length - 1);
+                json += lessTab;
                 return json;
             }
         }
