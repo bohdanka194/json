@@ -13,7 +13,7 @@ namespace JsonFormat
         {
             string mydir = @"C:\Users\bohda\Desktop\danya";
 
-            string json = JsonHelper.FormatJson(mydir);
+            string json = JSON.FormatJson(mydir);
             Console.WriteLine(json);
 
             Console.ReadKey();
