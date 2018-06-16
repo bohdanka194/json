@@ -11,7 +11,7 @@ namespace JsonFormat
     {
         static void Main(string[] args)
         {
-            string mydir = @"C:\Users\bohda\Desktop\danya";
+            string mydir = @"C:\Users\bohda\Desktop\folderJson";
 
             string json = JSON.FormatJson(mydir);
             Console.WriteLine(json);
