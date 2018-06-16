@@ -35,23 +35,31 @@ namespace JsonFormat
             // Console.WriteLine(a.GetLength(1));     // 11
             // Console.WriteLine(a.GetLength(2));     // 12
 
-            if (files.GetLength(0) == 0)
+            if (files.Length == 0)
             {
-                return " ";
+                return " 444 ";
             }
             else
             {
                 string json = "";
-                //...
+                foreach (var file in files)
+                {
+                    json += "\n" + "\t   {\n";
+                    json += "\t\t\"Name\": " + "\"" + file.Name + "\",\n";
+                    json += "\t\t\"Size\": " + "\"" + file.Length + " B\",\n";
+                    json += "\t\t\"Path\": " + "\"" + file.FullName + "\"\n";
+                    json += "\t   },\n";
+                }
+                json += "\t";
                 return json;
             }
         }
         public static string GetInfoChildren(string path)
         {
             DirectoryInfo[] subdirectories = new DirectoryInfo(path).GetDirectories();
-            if (subdirectories.GetLength(0) == 0)
+            if (subdirectories.Length == 0)
             {
-                return " ";
+                return " 555 ";
             }
             else
             {
